@@ -1,3 +1,64 @@
+body {
+    background: #f9f9f9;
+}
+
+.wrap {
+    /* padding: 40px; */
+    padding: 80px 80px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #ddd; */
+
+
+
+    input[type='text'] {
+        border: 3px solid rgb(41, 151, 87);
+    }
+
+    background: #fff;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+form {
+    padding: 80px 60px;
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+
+input {
+
+    height: 30px;
+    border-radius: 20px;
+    margin: 0 0 0 16px;
+    padding: 20px;
+}
+
+
 li.on {
     text-decoration: line-through;
+}
+
+li {
+    list-style: georgian;
+    padding: 0 20px;
+    margin: 0 0 24px 0;
+}
+
+button {
+    margin: 0 0 0 8px;
+    padding: 8px 12px;
+    border-radius: 20px;
+
+    background: #f0f6;
+    ;
+
+
+    border: none;
+    border: 2px solid #ddd;
 }

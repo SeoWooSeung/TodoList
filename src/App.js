@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./style.css";
+import "./reset.css";
 
 const App = () => {
   const [todo, setTodo] = useState([]);
@@ -50,25 +51,29 @@ const App = () => {
   console.log(todo);
   return (
     <>
-      <form onSubmit={todoUpdate} action="">
-        <input
-          type="text"
-          onChange={inputHandler}
-          value={todoItm.content || ""}
-        />
-        <button>todo</button>
-      </form>
-      <ol>
-        {todo.map((it, idx) => {
-          return (
-            <li className={it.done ? "on" : ""} key={it.id}>
-              {it.content}
-              <button onClick={() => modify(it.id)}>done</button>
-              <button onClick={() => done(it.id)}>delete</button>
-            </li>
-          );
-        })}
-      </ol>
+      <div className="wrap">
+        <div className="header">
+          <form onSubmit={todoUpdate} action="">
+            <input
+              type="text"
+              onChange={inputHandler}
+              value={todoItm.content || ""}
+            />
+            <button>todo</button>
+          </form>
+          <ul className="sub_txt">
+            {todo.map((it, idx) => {
+              return (
+                <li className={it.done ? "on" : ""} key={it.id}>
+                  {it.content}
+                  <button onClick={() => modify(it.id)}>done</button>
+                  <button onClick={() => done(it.id)}>delete</button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </>
   );
 };
